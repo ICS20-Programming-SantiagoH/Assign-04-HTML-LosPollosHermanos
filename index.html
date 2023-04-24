@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+    <!-- metadata -->
+    <meta charset="utf-8" />
+    <meta name="description" content="How old are you Going to the Movie Theater" />
+    <meta name="keywords" content="immaculata, ics2o" />
+    <meta name="author" content="Santiago Hewett" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Favicon code -->
+    <link rel="apple-touch-icon" sizes="180x180" href="./fav/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./fav/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="./fav/favicon-16x16.png" />
+    <link rel="manifest" href="./fav/site.webmanifest" />
+    
+    <!-- MDL connector -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.purple-blue.min.css" />
+    <!-- CSS connector -->
+    <link rel="stylesheet" href="./css/style.css" />
+    
+    <!-- Title -->
+    <title>How old are you Going to the Movie Theater</title>
+  </head>
+  <body>
+    
+    <!-- JS connector -->
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <script src="./js/script.js"></script>
+
+    <center>
+    <!-- MDL header -->
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+      <header class="mdl-layout__header">
+        <div class="mdl-layout__header-row">
+          <span class="mdl-layout-title">How old are you Going to the Movie Theater</span>
+        </div>
+      </header>
+      
+      <!-- Movie image -->
+      <main class="mdl-layout__content">
+        <table>
+          <tr>
+            <th>
+              <video width="320" height="240" autoplay>
+                <source src="pollos 1.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+      </main><br>
+              
+              <!-- Request -->
+              <label for="bucket">Choose bucket size:</label>
+              <select name="bucket" id="bucket">
+                <option value="4 piece ($7.99)">4 piece ($7.99)</option>
+                <option value="6 piece ($10.99)">6 piece ($10.99)</option>
+                <option value="10 piece ($14.99)">10 piece ($14.99)</option>
+                <option value="15 piece ($22.99)">15 piece ($22.99)</option>
+              </select><br><br>
+      <!-- Numeric Textfield -->
+      <form action=" javascript: enterClicked()">
+        <label for="bucketAmount">Entre amount of buckets:</label>
+        <input type="number" id="bucketAmount" placeholder="ex.3" step="1" min="0"><br><br>
+
+        
+      <label for="cars">Choose a car:</label>
+      <select name="cars" id="cars">
+        <option value="volvo">Volvo</option>
+        <option value="saab">Saab</option>
+        <option value="mercedes">Mercedes</option>
+        <option value="audi">Audi</option>
+      </select><br>
+      <input type="submit" value="Submit your age">
+                
+                <!-- Answer display -->
+                <h4>
+                  <div id="result"></div>
+                </h4>
+          </center>
+  </body>
+</html>
