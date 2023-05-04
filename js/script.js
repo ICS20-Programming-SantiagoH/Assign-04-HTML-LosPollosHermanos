@@ -7,14 +7,14 @@
 
 function chickenButton() {
   
- //Declare the value for tax and discount
+ //Declaring constants for tax and discount and sauce price
   const TAX_RATE = 1.13;
   
   const DISCOUNT = 0.07;
 
   const SAUCEPRICE = 0.04;
 
-  //What the user ordered 
+  // Colecting what the user ordered 
   let bucketChoice = document.getElementById('userChicken').value;
   
   let sauceChoice = document.getElementById('userSauce').value;
@@ -40,7 +40,7 @@ function chickenButton() {
   
   let userSideFries = parseInt(document.getElementById("user-side-fries").value);
 
-   //if statements for the value of bucket
+   //if statements for the value of bucket of chicken
   if (bucketChoice == "4pcs bucket") {
     bucketPrice = 7.99;
   }
@@ -79,7 +79,7 @@ function chickenButton() {
     friesPrice = 3.25;
   }
   
- //Use calculation 
+ // Calculation user order 
   let subTotal = (bucketPrice * userMain) + (SAUCEPRICE * sauceAmount) + (drinkPrice * userSideDrink) + (friesPrice * userSideFries);
   let total = subTotal * TAX_RATE;
   let discountTotal = total - (total * DISCOUNT);
