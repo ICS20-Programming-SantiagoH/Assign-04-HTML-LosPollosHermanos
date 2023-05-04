@@ -2,81 +2,102 @@
 <html>
   <head>
     
-    <!-- metadata -->
+    <!--- Meta Data --->
     <meta charset="utf-8" />
-    <meta name="description" content="How old are you Going to the Movie Theater" />
+    <meta name="description" content="Los Pollos Hermanos Chicken" />
     <meta name="keywords" content="immaculata, ics2o" />
     <meta name="author" content="Santiago Hewett" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
-    <!-- Favicon code -->
+    <!--- Favicon --->
     <link rel="apple-touch-icon" sizes="180x180" href="./fav/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="./fav/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="./fav/favicon-16x16.png" />
     <link rel="manifest" href="./fav/site.webmanifest" />
-    
-    <!-- MDL connector -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
-    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.purple-blue.min.css" />
-    <!-- CSS connector -->
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.deep_orange-red.min.css" />
     <link rel="stylesheet" href="./css/style.css" />
-    
-    <!-- Title -->
-    <title>How old are you Going to the Movie Theater</title>
+    <title>Los Pollos Hermanos Chicken</title>
   </head>
   <body>
-    
-    <!-- JS connector -->
-    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <!--- Header for page MDL --->
+        <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
     <script src="./js/script.js"></script>
-
-    <center>
-    <!-- MDL header -->
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+
+      <!-- MDL Header -->
       <header class="mdl-layout__header">
         <div class="mdl-layout__header-row">
-          <span class="mdl-layout-title">How old are you Going to the Movie Theater</span>
+          <span class="mdl-layout-title">Los Pollos Hermanos Chicken</span>
         </div>
       </header>
-      
-      <!-- Movie image -->
-      <main class="mdl-layout__content">
-        <table>
-          <tr>
-            <th>
-              <video width="320" height="240" autoplay>
-                <source src="pollos 1.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-              </video>
-      </main><br>
-              
-              <!-- Request -->
-              <label for="bucket">Choose bucket size:</label>
-              <select name="bucket" id="bucket">
-                <option value="4 piece ($7.99)">4 piece ($7.99)</option>
-                <option value="6 piece ($10.99)">6 piece ($10.99)</option>
-                <option value="10 piece ($14.99)">10 piece ($14.99)</option>
-                <option value="15 piece ($22.99)">15 piece ($22.99)</option>
-              </select><br><br>
-      <!-- Numeric Textfield -->
-      <form action=" javascript: enterClicked()">
-        <label for="bucketAmount">Entre amount of buckets:</label>
-        <input type="number" id="bucketAmount" placeholder="ex.3" step="1" min="0"><br><br>
+      <h2>Los Pollos Hermanos Chicken</h2>
 
+       <center>
+      <!-- Video of Los Pollos Hermanos -->
+    <video src="./videos/pollos 1.mp4" autoplay controls width="800">
+    </video>
+    </center>
+
+      <!-- How to order information -->
+      <h5>Please enter what you want to eat from our online menu(if you do not want a item put a 0 for the amount in the section)</h5>
+
+      <center>
+    <!--- Script --->
+    <script src="./js/script.js"></script>
+
+    <!--- Get user information for bucket of chicken --->
+      <form action="javascript:chickenButton()">
+        <label for="userChicken">Chicken bucket options:</label>
+        <select name="Bucket options" id="user-bucket">
+          <option value="4pcs bucket">4pcs bucket($7.99)</option>
+          <option value="6pcs bucket">6pcs bucket($10.99)</option>
+          <option value="10pcs bucket">10pcs bucket($14.99)</option>
+          <option value="15pcs bucket">15pcs bucket($22.99)</option>
+        </select>
+        <label for="usersMain">Please enter the amount of buckets you wold like:</label>
+        <input type="number" id="user-main" placeholder="ex.2" step="1" min="1" ><br><br>
         
-      <label for="cars">Choose a car:</label>
-      <select name="cars" id="cars">
-        <option value="volvo">Volvo</option>
-        <option value="saab">Saab</option>
-        <option value="mercedes">Mercedes</option>
-        <option value="audi">Audi</option>
-      </select><br>
-      <input type="submit" value="Submit your age">
-                
-                <!-- Answer display -->
-                <h4>
-                  <div id="result"></div>
-                </h4>
-          </center>
+        <!--- Get user information for what sauce --->
+        <label for="userSauce">Sauce options:</label>
+        <select name="Sauce options" id="user-sauce">
+  <option value="BBQ">BBQ($0.04)</option>
+  <option value="Ranch">Ranch($0.04)</option>
+  <option value="SweetAndSpicy">Sweet and Spicy($0.04)</option>
+</select>
+        <label for="sauceAmount">Please enter the amount of Sauces you would like:</label>
+        <input type="number" id="sauce-amount" placeholder="ex.4" step="1" min="0"><br><br>
+        
+        <label for="userDrink">Drink options:</label>
+        <select name="Drink options" id="user-drink">
+  <option value="Small Drink">Small Drink($1.25)</option>
+  <option value="Medium Drink">Medium Drink($2.00)</option>
+  <option value="Large Drink">Large Drink($3.00)</option>
+</select>
+        <label for="userSideDrink">Please enter the amount of drinks you would like:</label>
+        <input type="number" id="user-side-drink" placeholder="ex.3" step="1" min="0"><br><br>
+        
+        <label for="userFries">Fries options:</label>
+        <select name="fries options" id="user-fries">
+  <option value="small fries">Small fries($2.00)</option>
+  <option value="medium fries">Medium fries($2.75)</option>
+  <option value="large fries">Large fries($3.25)</option>
+</select>
+        <label for="userSideFries">Please enter the amount of fries you would like:</label>
+        <input type="number" id="user-side-fries" placeholder="ex.2" step="1" min="0"><br><br>
+        
+         <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" onclick ="chickenButton()">
+  Submit Order
+</button>
+    </form>
+        
+     <!-- Displeying order infomation back to user -->
+        <br>
+    <div id="order"></div>
+    <div id="userMoneySpent"></div>
+    <div id="moneyTaxed"></div>
+    <div id="discountedMoney">
+    </div>
+      <br>
+        </center>
   </body>
 </html>
