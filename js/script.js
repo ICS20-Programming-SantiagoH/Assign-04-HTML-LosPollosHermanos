@@ -14,7 +14,7 @@ function chickenButton() {
 
   const SAUCEPRICE = 0.04;
 
-  // Colecting what the user ordered 
+  // Collecting what the user ordered 
   let bucketChoice = document.getElementById('userChicken').value;
   
   let sauceChoice = document.getElementById('userSauce').value;
@@ -57,7 +57,7 @@ function chickenButton() {
     bucketPrice = 22.99;
   }
 
-  //if stament for the value of drink
+  //if statement for the value of drink
   if (drinkChoice == "Small Drink"){
     drinkPrice = 1.25;
   }
@@ -68,7 +68,7 @@ function chickenButton() {
     drinkPrice = 3.00;
   }
 
-   //if stament for the value of fries
+   //if statement for the value of fries
   if (friesChoice == "small fries"){
     friesPrice = 2.00;
   }
