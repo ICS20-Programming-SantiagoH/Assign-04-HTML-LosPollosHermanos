@@ -82,6 +82,7 @@ function chickenButton() {
  // Calculation user order 
   let subTotal = (bucketPrice * userMain) + (SAUCEPRICE * sauceAmount) + (drinkPrice * userSideDrink) + (friesPrice * userSideFries);
   let total = subTotal * TAX_RATE;
+  let tax = subTotal * 0.13;
   let discountTotal = total - (total * DISCOUNT);
 
   
@@ -90,6 +91,7 @@ function chickenButton() {
     document.getElementById('order').innerHTML = 'Your order is ' + userMain + ' bucket(s) of ' + bucketChoice + ', ' + userSideDrink + ' ' + drinkChoice + '(s), ' + userSideFries + ' ' + friesChoice + ', '  + sauceAmount + ' ' + sauceChoice + ' sauce(s).'
   document.getElementById('userMoneySpent').innerHTML = 'The subtotal of your order is $' + subTotal.toFixed(2)
   document.getElementById('moneyTaxed').innerHTML = 'Your order will cost you $ ' + total.toFixed(2)
+  document.getElementById('tax').innerHTML = 'The tax is  $ ' + tax.toFixed(2)
   document.getElementById('discountedMoney').innerHTML = 'If you had the discount you would only have to pay $ ' + discountTotal.toFixed(2)
   }
   else {
