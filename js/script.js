@@ -15,13 +15,13 @@ function chickenButton() {
   const SAUCEPRICE = 0.04;
 
   //What the user ordered 
-  let bucketChoice = document.getElementById('user-buckets').value;
+  let bucketChoice = document.getElementById('userChicken').value;
   
-  let sauceChoice = document.getElementById('user-sauce').value;
+  let sauceChoice = document.getElementById('userSauce').value;
   
-  let drinkChoice = document.getElementById('user-drink').value;
+  let drinkChoice = document.getElementById('userDrink').value;
   
-  let friesChoice = document.getElementById('user-fries').value;
+  let friesChoice = document.getElementById('userFries').value;
 
    //The price of each based on what user ordered
 
@@ -41,16 +41,19 @@ function chickenButton() {
   let userSideFries = parseInt(document.getElementById("user-side-fries").value);
 
    //if statements for the value of bucket
-  if (bucketChoice == "4pcs bucket"){
+  if (bucketChoice == "4pcs bucket") {
     bucketPrice = 7.99;
   }
-  else if (bucketChoice == "6pcs bucket"){
+    
+  else if (bucketChoice == "6pcs bucket") {
     bucketPrice = 10.99;
   }
-  else if (bucketChoice == "10pcs bucket"){
+    
+  else if (bucketChoice == "10pcs bucket") {
     bucketPrice = 14.99
   }
-  else{
+    
+  else {
     bucketPrice = 22.99;
   }
 
@@ -85,9 +88,9 @@ function chickenButton() {
  //Display information back to user 
   if (subTotal > 0){
     document.getElementById('order').innerHTML = 'Your order is ' + userMain + ' bucket(s) of ' + bucketChoice + ', ' + userSideDrink + ' ' + drinkChoice + '(s), ' + userSideFries + ' ' + friesChoice + ', '  + sauceAmount + ' ' + sauceChoice + ' sauce(s).'
-  document.getElementById('userMoneySpent').innerHTML = 'The subtotal of your order is $' + subTotal.toFixed(2) + '.'
-  document.getElementById('moneyTaxed').innerHTML = 'The total amount this order will cost you is $ ' + total.toFixed(2) + '.'
-  document.getElementById('discountedMoney').innerHTML = 'The amount of money this will cost you with the discount is $ ' + discountTotal.toFixed(2) + '.'
+  document.getElementById('userMoneySpent').innerHTML = 'The subtotal of your order is $' + subTotal.toFixed(2)
+  document.getElementById('moneyTaxed').innerHTML = 'Your order will cost you $ ' + total.toFixed(2)
+  document.getElementById('discountedMoney').innerHTML = 'If you had the discount you would only have to pay $ ' + discountTotal.toFixed(2)
   }
   else {
     document.getElementById('order').innerHTML = ''
